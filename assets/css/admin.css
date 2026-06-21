@@ -1,0 +1,281 @@
+/* HeadlessWP Admin Styles */
+
+/* ── Variables ─────────────────────────────────────────────────── */
+:root {
+	--kjm-primary:    #4f46e5;
+	--kjm-primary-h:  #4338ca;
+	--kjm-success:    #16a34a;
+	--kjm-danger:     #dc2626;
+	--kjm-warning:    #d97706;
+	--kjm-info:       #0369a1;
+	--kjm-bg:         #f8fafc;
+	--kjm-border:     #e2e8f0;
+	--kjm-text:       #1e293b;
+	--kjm-muted:      #64748b;
+	--kjm-card-bg:    #ffffff;
+	--kjm-radius:     8px;
+}
+
+/* ── Page wrapper ──────────────────────────────────────────────── */
+.headlesswp-wrap {
+	max-width: 900px;
+}
+
+/* ── Header ────────────────────────────────────────────────────── */
+.headlesswp-header {
+	background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+	border-radius: var(--kjm-radius);
+	margin-bottom: 0;
+	padding: 20px 24px;
+}
+
+.headlesswp-header-inner {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	flex-wrap: wrap;
+}
+
+.headlesswp-header h1 {
+	color: #f1f5f9;
+	font-size: 1.5rem;
+	font-weight: 700;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+}
+
+.headlesswp-logo {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+}
+
+.headlesswp-version {
+	color: #94a3b8;
+	font-size: 0.8rem;
+	margin-top: 2px;
+}
+
+/* ── Active/inactive badge ─────────────────────────────────────── */
+.headlesswp-badge {
+	display: inline-block;
+	padding: 3px 10px;
+	border-radius: 999px;
+	font-size: 0.72rem;
+	font-weight: 700;
+	letter-spacing: 0.06em;
+	text-transform: uppercase;
+}
+
+.headlesswp-badge--active {
+	background: #16a34a;
+	color: #fff;
+}
+
+.headlesswp-badge--inactive {
+	background: #64748b;
+	color: #fff;
+}
+
+/* ── Tabs ──────────────────────────────────────────────────────── */
+.headlesswp-nav-tab-wrapper {
+	border-bottom: 1px solid var(--kjm-border);
+	margin-bottom: 0 !important;
+	padding-top: 0;
+}
+
+.headlesswp-nav-tab-wrapper .nav-tab {
+	border-bottom: none;
+	margin-bottom: -1px;
+}
+
+.headlesswp-nav-tab-wrapper .nav-tab-active {
+	border-bottom: 2px solid var(--kjm-primary);
+	color: var(--kjm-primary);
+}
+
+/* ── Tab content ───────────────────────────────────────────────── */
+.headlesswp-tab-content {
+	background: var(--kjm-card-bg);
+	border: 1px solid var(--kjm-border);
+	border-top: none;
+	border-radius: 0 0 var(--kjm-radius) var(--kjm-radius);
+	padding: 24px;
+}
+
+/* ── Toggle switch ─────────────────────────────────────────────── */
+.headlesswp-toggle {
+	position: relative;
+	display: inline-block;
+	width: 48px;
+	height: 26px;
+	vertical-align: middle;
+}
+
+.headlesswp-toggle input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.headlesswp-toggle__slider {
+	position: absolute;
+	cursor: pointer;
+	inset: 0;
+	background: #cbd5e1;
+	border-radius: 999px;
+	transition: background 0.2s;
+}
+
+.headlesswp-toggle__slider::before {
+	content: '';
+	position: absolute;
+	width: 18px;
+	height: 18px;
+	left: 4px;
+	top: 4px;
+	background: #fff;
+	border-radius: 50%;
+	transition: transform 0.2s;
+	box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.headlesswp-toggle input:checked + .headlesswp-toggle__slider {
+	background: var(--kjm-primary);
+}
+
+.headlesswp-toggle input:checked + .headlesswp-toggle__slider::before {
+	transform: translateX(22px);
+}
+
+.headlesswp-toggle input:focus + .headlesswp-toggle__slider {
+	outline: 2px solid var(--kjm-primary);
+	outline-offset: 2px;
+}
+
+/* ── Info box ──────────────────────────────────────────────────── */
+.headlesswp-info-box {
+	background: #f0f4ff;
+	border: 1px solid #c7d2fe;
+	border-radius: var(--kjm-radius);
+	padding: 16px 20px;
+	margin: 16px 0;
+}
+
+.headlesswp-info-box pre {
+	margin: 8px 0 0;
+	font-size: 0.82rem;
+	color: #3730a3;
+	white-space: pre-wrap;
+	word-break: break-all;
+}
+
+/* ── Health grid ───────────────────────────────────────────────── */
+.headlesswp-health-grid {
+	display: grid;
+	gap: 12px;
+	margin-bottom: 16px;
+}
+
+.headlesswp-health-item {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	grid-template-rows: auto auto;
+	gap: 2px 12px;
+	background: var(--kjm-bg);
+	border: 1px solid var(--kjm-border);
+	border-radius: var(--kjm-radius);
+	padding: 12px 16px;
+}
+
+.headlesswp-health-label {
+	font-weight: 600;
+	color: var(--kjm-text);
+	grid-column: 1;
+	grid-row: 1;
+}
+
+.headlesswp-health-status {
+	grid-column: 2;
+	grid-row: 1;
+	font-size: 0.8rem;
+	font-weight: 700;
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	padding: 2px 10px;
+	border-radius: 999px;
+}
+
+.headlesswp-status--pass  { background: #dcfce7; color: var(--kjm-success); }
+.headlesswp-status--fail  { background: #fee2e2; color: var(--kjm-danger);  }
+.headlesswp-status--info  { background: #e0f2fe; color: var(--kjm-info);    }
+
+.headlesswp-health-detail {
+	grid-column: 1 / -1;
+	grid-row: 2;
+	font-size: 0.8rem;
+	color: var(--kjm-muted);
+}
+
+.headlesswp-health-timestamp {
+	color: var(--kjm-muted);
+	font-size: 0.78rem;
+	margin-top: 4px;
+}
+
+/* ── Tools grid ────────────────────────────────────────────────── */
+.headlesswp-tools {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+	gap: 16px;
+}
+
+.headlesswp-tool-card {
+	background: var(--kjm-bg);
+	border: 1px solid var(--kjm-border);
+	border-radius: var(--kjm-radius);
+	padding: 20px;
+}
+
+.headlesswp-tool-card h3 {
+	font-size: 1rem;
+	font-weight: 600;
+	margin: 0 0 8px;
+	color: var(--kjm-text);
+}
+
+.headlesswp-tool-card p {
+	font-size: 0.85rem;
+	color: var(--kjm-muted);
+	margin-bottom: 12px;
+}
+
+.headlesswp-tool-card--danger {
+	border-color: #fecaca;
+	background: #fff5f5;
+}
+
+/* ── Footer ────────────────────────────────────────────────────── */
+.headlesswp-footer {
+	margin-top: 20px;
+	padding: 12px 0;
+	border-top: 1px solid var(--kjm-border);
+	font-size: 0.82rem;
+	color: var(--kjm-muted);
+	text-align: center;
+}
+
+.headlesswp-footer a {
+	color: var(--kjm-primary);
+}
+
+/* ── Dashboard widget ──────────────────────────────────────────── */
+#headlesswp_health_widget .headlesswp-health-grid {
+	gap: 8px;
+}
+
+#headlesswp_health_widget .headlesswp-health-item {
+	padding: 8px 12px;
+}

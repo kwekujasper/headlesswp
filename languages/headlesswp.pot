@@ -1,0 +1,280 @@
+# Copyright (C) 2024 KJM Technologies
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: HeadlessWP by KJM 1.0.0\n"
+"Report-Msgid-Bugs-To: https://kjmtechnologies.com\n"
+"POT-Creation-Date: 2024-01-01 00:00:00+00:00\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"PO-Revision-Date: 2024-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"X-Generator: HeadlessWP POT Generator\n"
+"X-Domain: headlesswp\n"
+
+#: headlesswp.php
+msgid "Transform WordPress into a secure, configurable headless CMS for any modern frontend framework (Next.js, Nuxt, Astro, SvelteKit, and more)."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "HeadlessWP Settings"
+msgstr ""
+
+#: includes/class-admin.php
+msgid "HeadlessWP"
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Permission denied."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Permalink structure flushed."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Settings imported successfully."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Import failed. Please upload a valid HeadlessWP JSON file."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Settings have been reset to defaults."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Settings saved."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "<strong>HeadlessWP:</strong> Headless mode is active but no Frontend URL is configured. <a href=\"%s\">Configure now</a>."
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Settings"
+msgstr ""
+
+#: includes/class-admin.php
+msgid "Are you sure? This will reset all HeadlessWP settings to defaults."
+msgstr ""
+
+#: includes/class-api.php
+msgid "Feed not available. Please visit our website."
+msgstr ""
+
+#: includes/class-api.php
+msgid "Feed Disabled"
+msgstr ""
+
+#: includes/class-health.php
+msgid "WPGraphQL plugin not active."
+msgstr ""
+
+#: includes/class-health.php
+msgid "No frontend URL configured."
+msgstr ""
+
+#: includes/class-health.php
+msgid "No origins configured."
+msgstr ""
+
+#. translators: %d: number of allowed origins
+#: includes/class-health.php
+msgid "%d origin configured."
+msgid_plural "%d origins configured."
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %s: plugin version
+#: includes/class-health.php
+msgid "HeadlessWP v%s active."
+msgstr ""
+
+#: includes/class-redirects.php
+msgid "Frontend temporarily unavailable. Please try again later."
+msgstr ""
+
+#: templates/admin-page.php
+msgid "HeadlessWP by KJM"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Headless Active"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Headless Inactive"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "General"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "SEO"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Features"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "API & CORS"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Health"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Tools"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Enable Headless Mode"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Redirect all frontend requests to the external frontend. API, admin, and AJAX endpoints are always preserved."
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Frontend URL"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Preserve Slugs"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Append request path to frontend URL on redirect."
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Maintenance Mode"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Show maintenance page instead of redirecting."
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Save General Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Add Noindex Header"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Override robots.txt"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Save SEO Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Save Feature Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "CORS Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Allowed Origins"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Save CORS Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Run Check"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Clear Cache"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Test Frontend"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Open Frontend"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Flush Permalinks"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Export Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Import Settings"
+msgstr ""
+
+#: templates/admin-page.php
+msgid "Reset Settings"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "WordPress REST API"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "GraphQL Endpoint"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "Frontend Reachability"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "CORS Configuration"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "Plugin Status"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "Pass"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "Fail"
+msgstr ""
+
+#: templates/health-widget.php
+msgid "Info"
+msgstr ""
+
+#. translators: %s: datetime string
+#: templates/health-widget.php
+msgid "Last checked: %s"
+msgstr ""
+
+#: templates/maintenance.php
+msgid "Site Temporarily Unavailable"
+msgstr ""
+
+#: templates/maintenance.php
+msgid "Frontend Temporarily Unavailable"
+msgstr ""
+
+#: templates/maintenance.php
+msgid "We're making improvements to bring you a better experience. We'll be back online very soon."
+msgstr ""
+
+#: templates/maintenance.php
+msgid "Thank you for your patience."
+msgstr ""
