@@ -139,6 +139,8 @@ class Admin {
 		if ( ! current_user_can( 'manage_options' ) ) {
 			return;
 		}
+		$settings = $this->settings;
+		$health   = $this->health;
 		include HEADLESSWP_PLUGIN_DIR . 'templates/admin-page.php';
 	}
 
