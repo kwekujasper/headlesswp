@@ -179,6 +179,7 @@ class Admin {
 			'headlesswp_frontend_url'            => $this->settings->get( 'headlesswp_frontend_url' ),
 			'headlesswp_noindex'                 => $this->settings->get( 'headlesswp_noindex' ),
 			'headlesswp_preserve_slugs'          => $this->settings->get( 'headlesswp_preserve_slugs' ),
+			'headlesswp_post_path_prefix'        => $this->settings->get( 'headlesswp_post_path_prefix' ),
 			'headlesswp_disable_rss'             => $this->settings->get( 'headlesswp_disable_rss' ),
 			'headlesswp_disable_search'          => $this->settings->get( 'headlesswp_disable_search' ),
 			'headlesswp_disable_comments'        => $this->settings->get( 'headlesswp_disable_comments' ),
@@ -223,7 +224,7 @@ class Admin {
 
 		$allowed_keys = [
 			'headlesswp_enabled', 'headlesswp_frontend_url', 'headlesswp_noindex',
-			'headlesswp_preserve_slugs', 'headlesswp_disable_rss', 'headlesswp_disable_search',
+			'headlesswp_preserve_slugs', 'headlesswp_post_path_prefix', 'headlesswp_disable_rss', 'headlesswp_disable_search',
 			'headlesswp_disable_comments', 'headlesswp_disable_author_archives',
 			'headlesswp_disable_date_archives', 'headlesswp_allowed_origins',
 			'headlesswp_maintenance_mode', 'headlesswp_xmlrpc_enabled', 'headlesswp_robots_txt',
@@ -251,7 +252,7 @@ class Admin {
 
 		$keys = [
 			'headlesswp_enabled', 'headlesswp_frontend_url', 'headlesswp_noindex',
-			'headlesswp_preserve_slugs', 'headlesswp_disable_rss', 'headlesswp_disable_search',
+			'headlesswp_preserve_slugs', 'headlesswp_post_path_prefix', 'headlesswp_disable_rss', 'headlesswp_disable_search',
 			'headlesswp_disable_comments', 'headlesswp_disable_author_archives',
 			'headlesswp_disable_date_archives', 'headlesswp_allowed_origins',
 			'headlesswp_maintenance_mode', 'headlesswp_xmlrpc_enabled', 'headlesswp_robots_txt',

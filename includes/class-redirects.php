@@ -62,20 +62,63 @@ class Redirects {
 	 * Determine the redirect destination, optionally preserving the request slug/path.
 	 */
 	private function build_destination( string $frontend_url ): string {
+		$frontend_url = rtrim( $frontend_url, '/' );
+
 		if ( ! $this->settings->is_enabled( 'headlesswp_preserve_slugs' ) ) {
 			return trailingslashit( $frontend_url );
+		}
+
+		$mapped_path = $this->map_path_for_frontend();
+		if ( null !== $mapped_path ) {
+			return $frontend_url . $mapped_path;
 		}
 
 		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_url( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
 		$path        = wp_parse_url( $request_uri, PHP_URL_PATH ) ?? '/';
 		$query       = wp_parse_url( $request_uri, PHP_URL_QUERY ) ?? '';
 
-		$destination = rtrim( $frontend_url, '/' ) . $path;
+		$destination = $frontend_url . $path;
 		if ( ! empty( $query ) ) {
 			$destination .= '?' . $query;
 		}
 
 		return $destination;
+	}
+
+	/**
+	 * Maps the current WordPress request to the equivalent Next.js frontend
+	 * route, for content types whose frontend path doesn't mirror the WP
+	 * permalink 1:1 (e.g. a category or author archive lives under
+	 * /category/slug/ or /author/slug/ on the frontend, while a single post
+	 * mirrors its WP slug at the root: /my-post/). Returns null when no
+	 * mapping is known, so the caller falls back to preserving the raw
+	 * request path (used for static pages, which do mirror their WP slug).
+	 */
+	private function map_path_for_frontend(): ?string {
+		if ( is_single() ) {
+			$post = get_queried_object();
+			if ( ! ( $post instanceof \WP_Post ) ) {
+				return null;
+			}
+			$prefix = $this->settings->post_path_prefix();
+			return '/' . ( '' !== $prefix ? $prefix . '/' : '' ) . $post->post_name . '/';
+		}
+
+		if ( is_category() ) {
+			$term = get_queried_object();
+			return $term instanceof \WP_Term ? '/category/' . $term->slug . '/' : null;
+		}
+
+		if ( is_author() ) {
+			$author = get_queried_object();
+			return $author instanceof \WP_User ? '/author/' . $author->user_nicename . '/' : null;
+		}
+
+		if ( is_front_page() || is_home() ) {
+			return '/';
+		}
+
+		return null;
 	}
 
 	/**

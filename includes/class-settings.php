@@ -42,6 +42,16 @@ class Settings {
 	}
 
 	/**
+	 * Return the configured path prefix for single-post redirects
+	 * (e.g. "post" so a post redirects to /post/my-slug/), with slashes
+	 * trimmed. Empty string means posts redirect to the frontend root:
+	 * /my-slug/.
+	 */
+	public function post_path_prefix(): string {
+		return trim( (string) $this->get( 'headlesswp_post_path_prefix', '' ), '/' );
+	}
+
+	/**
 	 * Whether headless mode is currently active.
 	 */
 	public function is_headless(): bool {
@@ -77,6 +87,7 @@ class Settings {
 			'headlesswp_frontend_url'            => [ 'sanitize_callback' => 'esc_url_raw' ],
 			'headlesswp_noindex'                 => [ 'sanitize_callback' => 'sanitize_text_field' ],
 			'headlesswp_preserve_slugs'          => [ 'sanitize_callback' => 'sanitize_text_field' ],
+			'headlesswp_post_path_prefix'        => [ 'sanitize_callback' => 'sanitize_text_field' ],
 			'headlesswp_disable_rss'             => [ 'sanitize_callback' => 'sanitize_text_field' ],
 			'headlesswp_disable_search'          => [ 'sanitize_callback' => 'sanitize_text_field' ],
 			'headlesswp_disable_comments'        => [ 'sanitize_callback' => 'sanitize_text_field' ],

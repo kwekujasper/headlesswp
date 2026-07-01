@@ -110,6 +110,17 @@ endif;
 					</td>
 				</tr>
 				<tr>
+					<th scope="row">
+						<label for="headlesswp_post_path_prefix"><?php esc_html_e( 'Post Path Prefix', 'headlesswp' ); ?></label>
+					</th>
+					<td>
+						<input type="text" id="headlesswp_post_path_prefix" name="headlesswp_post_path_prefix"
+							value="<?php echo esc_attr( $settings->get( 'headlesswp_post_path_prefix' ) ); ?>"
+							class="regular-text" placeholder="post" />
+						<p class="description"><?php esc_html_e( 'Optional path segment prepended to single-post redirects. Leave blank to redirect straight to the frontend root (e.g. plus233.com/my-post). Set to "post" to redirect to plus233.com/post/my-post instead. Only applies when Preserve Slugs is enabled.', 'headlesswp' ); ?></p>
+					</td>
+				</tr>
+				<tr>
 					<th scope="row"><?php esc_html_e( 'Maintenance Mode', 'headlesswp' ); ?></th>
 					<td>
 						<label>

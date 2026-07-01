@@ -1,5 +1,5 @@
 === HeadlessWP by KJM ===
-Contributors: kjmtechnologies
+Contributors: Kweku Jasper Media
 Tags: headless, rest-api, graphql, cors, redirect, headless-cms
 Requires at least: 6.5
 Tested up to: 6.7

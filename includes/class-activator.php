@@ -35,6 +35,7 @@ class Activator {
 			'headlesswp_frontend_url'            => '',
 			'headlesswp_noindex'                 => '0',
 			'headlesswp_preserve_slugs'          => '1',
+			'headlesswp_post_path_prefix'        => '',
 			'headlesswp_disable_rss'             => '0',
 			'headlesswp_disable_search'          => '0',
 			'headlesswp_disable_comments'        => '0',
