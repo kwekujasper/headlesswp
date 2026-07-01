@@ -173,6 +173,13 @@ class Redirects {
 			return true;
 		}
 
+		// Post/page previews (e.g. ?p=123&preview=true from the WP editor).
+		// The frontend can't render unpublished/draft content, so let
+		// WordPress serve its own preview instead of redirecting it away.
+		if ( is_preview() ) {
+			return true;
+		}
+
 		$request_uri = isset( $_SERVER['REQUEST_URI'] ) ? sanitize_url( wp_unslash( $_SERVER['REQUEST_URI'] ) ) : '';
 
 		$allowed_patterns = [
