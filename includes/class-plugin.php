@@ -42,6 +42,9 @@ class Plugin {
 	/** @var Health */
 	private Health $health;
 
+	/** @var Graphql */
+	private Graphql $graphql;
+
 	private function __construct() {}
 
 	/**
@@ -65,6 +68,7 @@ class Plugin {
 		$this->cors      = new Cors( $this->settings );
 		$this->health    = new Health( $this->settings );
 		$this->admin     = new Admin( $this->settings, $this->health );
+		$this->graphql   = new Graphql( $this->settings );
 
 		$this->settings->register_hooks();
 		$this->redirects->register_hooks();
@@ -73,5 +77,6 @@ class Plugin {
 		$this->cors->register_hooks();
 		$this->health->register_hooks();
 		$this->admin->register_hooks();
+		$this->graphql->register_hooks();
 	}
 }
