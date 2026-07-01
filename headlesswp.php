@@ -1,13 +1,13 @@
 <?php
 /**
  * Plugin Name:       HeadlessWP by KJM
- * Plugin URI:        https://kjmtechnologies.com/headlesswp
+ * Plugin URI:        https://kwekujasper.com/headlesswp
  * Description:       Transform WordPress into a secure, configurable headless CMS for any modern frontend framework (Next.js, Nuxt, Astro, SvelteKit, and more).
- * Version:           1.0.0
+ * Version:           1.0.1
  * Requires at least: 6.5
  * Requires PHP:      8.1
- * Author:            KJM Technologies
- * Author URI:        https://kjmtechnologies.com
+ * Author:            Kweku Jasper Media
+ * Author URI:        https://kwekujasper.com
  * License:           GPL v2 or later
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       headlesswp
@@ -20,7 +20,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-define( 'HEADLESSWP_VERSION', '1.0.0' );
+define( 'HEADLESSWP_VERSION', '1.0.1' );
 define( 'HEADLESSWP_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'HEADLESSWP_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'HEADLESSWP_PLUGIN_FILE', __FILE__ );

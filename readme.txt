@@ -4,7 +4,7 @@ Tags: headless, rest-api, graphql, cors, redirect, headless-cms
 Requires at least: 6.5
 Tested up to: 6.7
 Requires PHP: 8.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,9 @@ By default XML-RPC remains enabled (useful for Jetpack and mobile apps). You can
 5. Tools — export, import, flush, and reset.
 
 == Changelog ==
+
+= 1.0.1 =
+* Updated plugin contributor to Kweku Jasper Media.
 
 = 1.0.0 =
 * Initial release.

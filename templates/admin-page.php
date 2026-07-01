@@ -320,7 +320,7 @@ Access-Control-Allow-Headers: Authorization, Content-Type, X-WP-Nonce, X-Request
 				/* translators: 1: plugin name, 2: author link */
 				esc_html__( '%1$s — crafted by %2$s', 'headlesswp' ),
 				'<strong>HeadlessWP by KJM</strong>',
-				'<a href="https://kjmtechnologies.com" target="_blank" rel="noopener noreferrer">KJM Technologies</a>'
+				'<a href="https://kwekujasper.com" target="_blank" rel="noopener noreferrer">Kweku Jasper Media</a>'
 			);
 			?>
 		</p>
